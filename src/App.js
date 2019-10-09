@@ -1,14 +1,22 @@
 import React from "react";
 import "./App.css";
-import Photo from "./components/Photo"
+import InfoBar from "./components/InfoBar";
+import DescPanel from "./components/DescPanel/DescPanel";
+import Photo from "./components/Photo";
+
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <header>
+        <h1>NASA</h1>
+        <div className="iconContainer">
+          <img src={ require('./images/icons8-shooting-stars-100.png')} alt="NASA icon" />
+        </div>
+        <h2>Image of the Day</h2>
+      </header>
+      <InfoBar />
+      <DescPanel />
       <Photo />
     </div>
   );
@@ -28,3 +36,4 @@ export default App;
 // title: "NGC 7714: Starburst after Galaxy Collision"
 // url: "https://apod.nasa.gov/apod/image/1910/Ngc7714_HubblePohl_1080.jpg"
 // }
+

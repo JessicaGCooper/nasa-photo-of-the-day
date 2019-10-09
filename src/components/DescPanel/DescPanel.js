@@ -1,22 +1,33 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 
-export default function Photo() {
-    const [photo, setPhoto] = useState("")
+export default function DescPanel() {
+    const [descPanel, setDescPanel] = useState("")
+
     useEffect(() => {
         axios
             .get('https://api.nasa.gov/planetary/apod?api_key=Rb1p7Wph42s91BTrR2MWnLk663go2CDNX07yeag3')
             .then(response => {
-                setPhoto(response.data.hdurl);
+                setDescPanel(response.data.explanation);
             })
             .catch(error => {
                 console.log("The data was not returned:", error)
             });
-    }, [photo]);
+    }, []);
 
     return (
-        <div className="photoContainer">
-            <img src={photo} alt= "NASA_Photo_of_the_Day" />
+        <div className="descPanelContainer">
+           <section className="descPanel">
+               <div className="descPanelBar">
+                <h3>Description</h3>
+                <div className="descPanelButtons">
+                    {/* put imported buttons here */}
+                </div>
+               </div>
+               <div className="descPanelContent">
+                 <p>{descPanel}</p>
+               </div>
+           </section>
         </div>
     );
 }
