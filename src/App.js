@@ -1,11 +1,26 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./App.css";
+import axios from "axios";
 import InfoBar from "./components/InfoBar";
 import DescPanel from "./components/DescPanel/DescPanel";
 import Photo from "./components/Photo";
 
 
-function App() {
+function App(props) {
+  
+    const [parts, setParts] = useState("")
+    
+    useEffect(() => {
+        axios
+            .get('https://api.nasa.gov/planetary/apod?api_key=Rb1p7Wph42s91BTrR2MWnLk663go2CDNX07yeag3')
+            .then(response => {
+                setParts(response.data);
+            })
+            .catch(error => {
+                console.log("The data was not returned:", error)
+            });
+    }, []);
+  
   return (
     <div className="App">
       <header>
@@ -15,9 +30,12 @@ function App() {
         </div>
         <h2>Image of the Day</h2>
       </header>
-      <InfoBar />
-      <DescPanel />
-      <Photo />
+      <InfoBar parts1={parts} />
+      <DescPanel parts1={parts} setParts1={setParts}/>
+      <Photo parts1={parts} />
+      <footer>
+        <h3 className="footer">Image &amp; Information Courtesy of NASA</h3>
+      </footer>
     </div>
   );
 }

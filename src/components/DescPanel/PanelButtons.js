@@ -1,12 +1,10 @@
-import React, {useState} from "react";
+// import React from "react";
 
-const PanelButtons = props {
+// const PanelButtons = props {
     
-
-
-    return (
-        <div className="buttonsContainer">
+//     return (
+//         <div className="buttonsContainer">
            
-        </div>
-    );
-}
+//         </div>
+//     );
+// }
