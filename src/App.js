@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from "axios";
+import Header from "./components/Header"
 import InfoBar from "./components/InfoBar";
 import DescPanel from "./components/DescPanel/DescPanel";
 import Photo from "./components/Photo";
+
 
 
 function App(props) {
@@ -23,15 +25,9 @@ function App(props) {
   
   return (
     <div className="App">
-      <header>
-        <h1>NASA</h1>
-        <div className="iconContainer">
-          <img src={ require('./images/icons8-shooting-stars-100.png')} alt="NASA icon" />
-        </div>
-        <h2>Image of the Day</h2>
-      </header>
+      <Header />
       <InfoBar parts1={parts} />
-      <DescPanel parts1={parts} setParts1={setParts}/>
+      <DescPanel parts1={parts}/>
       <Photo parts1={parts} />
       <footer>
         <h3 className="footer">Image &amp; Information Courtesy of NASA</h3>
