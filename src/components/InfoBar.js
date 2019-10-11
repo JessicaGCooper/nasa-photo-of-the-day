@@ -6,7 +6,7 @@ const InfoBarContainer = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #324856;
+    background: #133757;
 `;
 
 const ImageName = styled.div`

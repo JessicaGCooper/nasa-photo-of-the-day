@@ -23,7 +23,7 @@ const SubTitle = styled.h2`
   font-family: 'Merriweather', serif;
   text-transform: uppercase;
   letter-spacing: 3px;
-`
+`;
 
 
 const Header = () => {
@@ -42,3 +42,4 @@ return (
 export default Header
 
 //#ce9180, #d66c44, #d18237, #ffb471, #f6bb2b, #809d4a, #4a746a, #324856
+//#f2e897

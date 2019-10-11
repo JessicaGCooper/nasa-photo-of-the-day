@@ -1,5 +1,4 @@
 body * {
-  border: 1px solid dodgerblue;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -13,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 62.5%;
+  background: #133757;
 }
 
 code {
