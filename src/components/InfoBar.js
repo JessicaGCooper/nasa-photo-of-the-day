@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { device } from "./MediaQueries" 
 
 const InfoBarContainer = styled.section`
     width: 100%;
@@ -16,6 +17,12 @@ const ImageName = styled.div`
     margin-bottom: 20px;
     border-radius: 10px;
     background: #d66c44;
+
+    @media ${device.tablet} {
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
 `;
 
 const Name = styled.h2`
@@ -34,6 +41,12 @@ const ImageDate = styled.div`
     margin-bottom: 20px;
     border-radius: 10px;
     background: #d66c44;
+
+    @media ${device.tablet} {
+        width: 60%;
+        margin-right: 20%;
+        margin-left: 20%;
+    }
 `;
 
 const Date = styled.h3`

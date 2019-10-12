@@ -8,7 +8,6 @@ import Photo from "./components/Photo";
 import Footer from "./components/Footer"
 
 
-
 function App(props) {
   
     const [parts, setParts] = useState("")

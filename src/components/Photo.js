@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { device } from "./MediaQueries" 
 
 const PhotoSection = styled.div`
     display: flex;
@@ -8,6 +9,12 @@ const PhotoSection = styled.div`
     margin-right: 10%;
     margin-left: 10%;
     background: #133757;
+
+    @media ${device.tablet} {
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
 `;
 
 const DailyImage = styled.img`
