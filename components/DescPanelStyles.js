@@ -9,6 +9,8 @@ export const PanelContainer = styled.div`
     flex-direction: column;
     align-items: center;
     background: #0a1631;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 
     @media ${device.tablet} {
         width: 90%;
@@ -23,7 +25,7 @@ export const Panel = styled.section`
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    background: black;
+    background: #0a1631;
 
     @media ${device.tablet} {
         width: 80%;
@@ -55,7 +57,7 @@ export const PanelButtonContainer = styled.div`
 
 export const PanelButton = styled.button`
     background: #0a1631;
-    border: 1px solid #0a1631;
+    border: 1px solid #133757;
 `;
 
 export const ButtonImage = styled.img`
@@ -66,7 +68,7 @@ export const ButtonImage = styled.img`
 
     &:hover {
         transform: scale(1.15);
-    }
+      }
 `;
 
 export const PanelText = styled.p`

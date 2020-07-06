@@ -11,13 +11,12 @@ const InfoBarContainer = styled.section`
 `;
 
 const ImageName = styled.div`
-    color: #e6a48b;
     width: 40%;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    background: #0a1631;
+    background: black;
 
     @media ${device.tablet} {
         width: 90%;
@@ -30,16 +29,18 @@ const Name = styled.h2`
     font-size: 1.7rem;
     padding: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
     line-height: 1.2;
     font-family: 'Josefin Sans', sans-serif;
 `;
 
 const ImageDate = styled.div`
-    color: #e6a48b;
     width: 20%;
     padding: 10px;
+    margin-top: 10px;
     margin-bottom: 20px;
-    background: #0a1631;
+    border-radius: 10px;
+    background: black;
 
     @media ${device.tablet} {
         width: 60%;

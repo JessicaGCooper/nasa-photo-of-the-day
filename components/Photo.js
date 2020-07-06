@@ -8,7 +8,8 @@ const PhotoSection = styled.div`
     width: 80%;
     margin-right: 10%;
     margin-left: 10%;
-    background: #0a1631;
+    background: #133757;
+    border-radius: 15px;
 
     @media ${device.tablet} {
         width: 90%;
@@ -20,7 +21,6 @@ const PhotoSection = styled.div`
 const DailyImage = styled.img`
     width: 100%;
     height: auto;
-    border-radius: 10px;
 `;
 
 
